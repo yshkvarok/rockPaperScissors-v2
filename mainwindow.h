@@ -7,6 +7,7 @@
 #include <QTime>
 #include <QtGlobal>
 #include <QMessageBox>
+#include <QLCDNumber>
 
 
 namespace Ui {
