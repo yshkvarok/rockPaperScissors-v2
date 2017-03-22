@@ -78,30 +78,59 @@ void MainWindow::mainGame(QString userChoice)
     if (userChoice == "rock")
     {
         if (compChoice == "rock")
+        {
             QMessageBox::information(this, "Results", "Tie! Computer also picked rock.");
+            ui->lcdNumber_4->display(ui->lcdNumber_4->intValue() + 1);
+        }
         else if (compChoice == "paper")
+        {
             QMessageBox::information(this, "Results", "You lose. Computer picked paper.");
+            ui->lcdNumber_3->display(ui->lcdNumber_3->intValue() + 1);
+        }
         if (compChoice == "scissors")
+        {
             QMessageBox::information(this, "Results", "You win! Computer picked scissors.");
+            ui->lcdNumber_2->display(ui->lcdNumber_2->intValue() + 1);
+        }
     }
 
     else if (userChoice == "paper")
     {
         if (compChoice == "rock")
+        {
             QMessageBox::information(this, "Results", "You win! Computer picked rock.");
+            ui->lcdNumber_2->display(ui->lcdNumber_2->intValue() + 1);
+        }
         else if (compChoice == "paper")
+        {
             QMessageBox::information(this, "Results", "Tie! Computer also picked paper.");
+            ui->lcdNumber_4->display(ui->lcdNumber_4->intValue() + 1);
+        }
         if (compChoice == "scissors")
+        {
             QMessageBox::information(this, "Results", "You lose! Computer picked scissors.");
+            ui->lcdNumber_3->display(ui->lcdNumber_3->intValue() + 1);
+        }
     }
 
     else if (userChoice == "scissors")
     {
         if (compChoice == "rock")
+        {
             QMessageBox::information(this, "Results", "You lose! Computer picked rock.");
+            ui->lcdNumber_3->display(ui->lcdNumber_3->intValue() + 1);
+        }
         else if (compChoice == "paper")
+        {
             QMessageBox::information(this, "Results", "You win! Computer also picked scissors.");
+            ui->lcdNumber_2->display(ui->lcdNumber_2->intValue() + 1);
+        }
         if (compChoice == "scissors")
+        {
             QMessageBox::information(this, "Results", "Tie! Computer also picked scissors.");
+            ui->lcdNumber_4->display(ui->lcdNumber_4->intValue() + 1);
+        }
     }
+
+    ui->lcdNumber->display(ui->lcdNumber->intValue() + 1);
 }
